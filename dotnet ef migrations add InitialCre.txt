@@ -1,0 +1,11 @@
+dotnet tool install --global dotnet-ef
+dotnet ef migrations add InitialCreate -p Ordermanagement.Infrastructure -s Ordermanagement.Api -c WriteDbContext
+dotnet ef database update -p Ordermanagement.Infrastructure -s Ordermanagement.Api -c WriteDbContext
+
+
+SELECT LOGINPROPERTY('sa', 'IsLocked');
+ALTER LOGIN sa WITH PASSWORD = '123' UNLOCK;
+
+CREATE LOGIN ef_user WITH PASSWORD = 'StrongPassword123!';
+CREATE USER ef_user FOR LOGIN ef_user;
+ALTER ROLE db_owner ADD MEMBER ef_user;
