@@ -29,6 +29,22 @@ namespace OrderManagement.Application.Users
                 password: hashed,
                 role : Domain.Enums.UserRole.Admin
             ));
+
+            await _userCommandRepository.RegisterAsync(new User
+            (
+                fullName: "admin admin",
+                email: "admin@bargito.ir",
+                password: hashed,
+                role: Domain.Enums.UserRole.Admin
+            ));
+
+            await _userCommandRepository.RegisterAsync(new User
+            (
+                fullName: "client client",
+                email: "client@bargito.ir",
+                password: hashed,
+                role: Domain.Enums.UserRole.Employee
+            ));
         }
     }
 }

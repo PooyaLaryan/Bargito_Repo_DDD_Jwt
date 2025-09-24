@@ -20,6 +20,10 @@ public class User : Entity
     public UserRole Role { get; private set; }
 
 
+    //Navigation
+    public ICollection<Ticket> CreatedTickets { get; set; } = new List<Ticket>();
+    public ICollection<Ticket> AssignedTickets { get; set; } = new List<Ticket>();
+
     public Task<Guid> Login() 
     {
         return Task.FromResult(Guid.Empty);

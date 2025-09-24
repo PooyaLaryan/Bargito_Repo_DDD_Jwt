@@ -3,12 +3,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Ordermanagement.Infrastructure.Persistence;
 using Ordermanagement.Infrastructure.Repositories.Security;
+using Ordermanagement.Infrastructure.Repositories.Tickets.Command;
 using Ordermanagement.Infrastructure.Repositories.Users.Command;
 using Ordermanagement.Infrastructure.Repositories.Users.Query;
 using OrderManagement.Application.Users;
 using OrderManagement.Application.Users.Command;
 using OrderManagement.Application.Users.Query;
 using OrderManagement.Domain.Repositories.Security;
+using OrderManagement.Domain.Repositories.Tickets.Command;
 using OrderManagement.Domain.Repositories.Users.Command;
 using OrderManagement.Domain.Repositories.Users.Query;
 using System.Text;
@@ -61,6 +63,7 @@ internal class Program
         builder.Services.AddScoped<DbSeeder>();
         builder.Services.AddScoped<IUserCommandRepository, UserCommandRepository>();
         builder.Services.AddScoped<ILoginQueryRepository, LoginQueryRepository>();
+        builder.Services.AddScoped<ITicketCommandRepository, TicketCommandRepository>();
         builder.Services.AddScoped<ITokenGenerator, JwtTokenGenerator>();
 
         var app = builder.Build();
@@ -74,6 +77,8 @@ internal class Program
         }
 
         app.UseHttpsRedirection();
+
+        app.UseAuthentication();
 
         app.UseAuthorization();
 
