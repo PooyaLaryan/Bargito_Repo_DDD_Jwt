@@ -29,7 +29,7 @@ namespace OrderManagement.Domain.Entities
         public Guid? AssignedToUserId { get; private set; }
         public User? AssignedToUser { get; set; }
 
-        public DateTime CreatedAt { get; private set; }
+        public DateTime CreatedAt { get; private set; } = DateTime.Now;
         public DateTime UpdatedAt { get; private set; }
 
         public static Ticket Create(string title, string description, Priority priority, Guid createdByUserId)
