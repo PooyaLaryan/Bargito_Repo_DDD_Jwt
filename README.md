@@ -1,6 +1,6 @@
 # Order Management Project / پروژه مدیریت سفارشات
 
-[![Build Status](https://img.shields.io/badge/build-pending-lightgrey)](https://example.com)  [![.NET](https://img.shields.io/badge/.NET-7-blue)](https://dotnet.microsoft.com/)  [![License: MIT](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
+[![Build Status](https://img.shields.io/badge/build-pending-lightgrey)](https://example.com)  [![.NET](https://img.shields.io/badge/.NET-9-blue)](https://dotnet.microsoft.com/)  [![License: MIT](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
 ---
 
