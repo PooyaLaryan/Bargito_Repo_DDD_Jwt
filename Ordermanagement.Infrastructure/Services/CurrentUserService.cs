@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using OrderManagement.Domain.Enums;
-using OrderManagement.Domain.Repositories.Users;
+using OrderManagement.Domain.Services;
 using System.Security.Claims;
 
 namespace Ordermanagement.Infrastructure.Services;

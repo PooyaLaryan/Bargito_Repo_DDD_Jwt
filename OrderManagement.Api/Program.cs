@@ -3,21 +3,21 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Ordermanagement.Infrastructure.Persistence;
-using Ordermanagement.Infrastructure.Repositories.Security;
 using Ordermanagement.Infrastructure.Repositories.Tickets.Command;
 using Ordermanagement.Infrastructure.Repositories.Tickets.Query;
 using Ordermanagement.Infrastructure.Repositories.Users.Command;
 using Ordermanagement.Infrastructure.Repositories.Users.Query;
 using Ordermanagement.Infrastructure.Services;
+using Ordermanagement.Infrastructure.Services.Security;
 using OrderManagement.Application.Users;
 using OrderManagement.Application.Users.Command;
 using OrderManagement.Application.Users.Query;
 using OrderManagement.Domain.Repositories.Security;
 using OrderManagement.Domain.Repositories.Tickets.Command;
 using OrderManagement.Domain.Repositories.Tickets.Query;
-using OrderManagement.Domain.Repositories.Users;
 using OrderManagement.Domain.Repositories.Users.Command;
 using OrderManagement.Domain.Repositories.Users.Query;
+using OrderManagement.Domain.Services;
 
 internal class Program
 {

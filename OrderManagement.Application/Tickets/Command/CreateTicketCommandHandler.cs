@@ -2,7 +2,7 @@
 using OrderManagement.Domain.Entities;
 using OrderManagement.Domain.Enums;
 using OrderManagement.Domain.Repositories.Tickets.Command;
-using OrderManagement.Domain.Repositories.Users;
+using OrderManagement.Domain.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

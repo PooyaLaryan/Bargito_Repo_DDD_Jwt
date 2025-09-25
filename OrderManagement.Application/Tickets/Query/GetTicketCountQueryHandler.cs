@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MediatR;
 using OrderManagement.Domain.Enums;
 using OrderManagement.Domain.Repositories.Tickets.Query;
-using OrderManagement.Domain.Repositories.Users;
+using OrderManagement.Domain.Services;
 
 namespace OrderManagement.Application.Tickets.Query
 {

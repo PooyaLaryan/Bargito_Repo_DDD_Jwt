@@ -7,9 +7,9 @@ using MediatR;
 using OrderManagement.Domain.Enums;
 using OrderManagement.Domain.Repositories.Tickets.Command;
 using OrderManagement.Domain.Repositories.Tickets.Query;
-using OrderManagement.Domain.Repositories.Users;
 using OrderManagement.Domain.Repositories.Users.Command;
 using OrderManagement.Domain.Repositories.Users.Query;
+using OrderManagement.Domain.Services;
 
 namespace OrderManagement.Application.Tickets.Command
 {

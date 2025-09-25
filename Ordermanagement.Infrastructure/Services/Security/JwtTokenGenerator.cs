@@ -6,7 +6,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace Ordermanagement.Infrastructure.Repositories.Security;
+namespace Ordermanagement.Infrastructure.Services.Security;
 
 public class JwtTokenGenerator : ITokenGenerator
 {
