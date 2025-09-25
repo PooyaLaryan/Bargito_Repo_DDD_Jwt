@@ -67,5 +67,13 @@ namespace OrderManagement.Api.Controllers
             await _mediator.Send(deleteTicketCommand);
             return Ok();
         }
+
+        [HttpGet("{id}")]
+        [Authorize]
+        public async Task<IActionResult> GetTicket(Guid id)
+        {
+            var result = await _mediator.Send(new GetTicketByIdQuery(id));
+            return Ok(result);
+        }
     }
 }

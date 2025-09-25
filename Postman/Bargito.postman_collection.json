@@ -73,7 +73,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ZTUwMjBlZC1jYjE0LTRlMGItYTE5ZC1hMzU5ZmM0NmE1YWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiY2xpZW50IGNsaWVudCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImNsaWVudEBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiRW1wbG95ZWUiLCJleHAiOjE3NTg3OTc2MDcsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.TtEnNVczzz_Rz6FlII5tAyDOz2zJgTyRmRU00P-7Juc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ZTUwMjBlZC1jYjE0LTRlMGItYTE5ZC1hMzU5ZmM0NmE1YWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiY2xpZW50IGNsaWVudCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImNsaWVudEBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiRW1wbG95ZWUiLCJleHAiOjE3NjE0MjI3MTUsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.CR62Ko2NfW-k8qXbVqPOIGgy5Wg2b3BW5fbnBNqoURQ",
 							"type": "string"
 						}
 					]
@@ -112,7 +112,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ZTUwMjBlZC1jYjE0LTRlMGItYTE5ZC1hMzU5ZmM0NmE1YWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiY2xpZW50IGNsaWVudCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImNsaWVudEBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiRW1wbG95ZWUiLCJleHAiOjE3NTg3OTc2MDcsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.TtEnNVczzz_Rz6FlII5tAyDOz2zJgTyRmRU00P-7Juc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ZTUwMjBlZC1jYjE0LTRlMGItYTE5ZC1hMzU5ZmM0NmE1YWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiY2xpZW50IGNsaWVudCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImNsaWVudEBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiRW1wbG95ZWUiLCJleHAiOjE3NjE0MjI3MTUsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.CR62Ko2NfW-k8qXbVqPOIGgy5Wg2b3BW5fbnBNqoURQ",
 							"type": "string"
 						}
 					]
@@ -121,7 +121,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"New Ticket From Client\",\r\n  \"description\": \"Please Do that!\",\r\n  \"status\": 0,\r\n  \"priority\": 0\r\n}",
+					"raw": "{\r\n  \"title\": \"New Ticket From Client 3\",\r\n  \"description\": \"Please Do that!\",\r\n  \"status\": 0,\r\n  \"priority\": 0\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -179,7 +179,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZDc0MWZmMS1lYzQ5LTQzM2UtYWY5OC1kMzUyN2RhNTZmZjAiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4gYWRtaW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3NTg3OTc1NjUsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.oAhBL04-7rTCL9ZB7IodfCH1o2kLyYzuH00uZsfxe58",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZDc0MWZmMS1lYzQ5LTQzM2UtYWY5OC1kMzUyN2RhNTZmZjAiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4gYWRtaW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3NjE0MjI3ODMsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.8eN17aprGXRo3wDoDB1OCbcGXf0IMiOV-y8KfV0L_O0",
 							"type": "string"
 						}
 					]
@@ -205,7 +205,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:7167/tickets/770f0ffc-a123-4c9b-bf71-9b9a40fd650c",
+					"raw": "https://localhost:7167/tickets/4f203fba-6bfe-4eb7-9587-a767c1537724",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -213,7 +213,7 @@
 					"port": "7167",
 					"path": [
 						"tickets",
-						"770f0ffc-a123-4c9b-bf71-9b9a40fd650c"
+						"4f203fba-6bfe-4eb7-9587-a767c1537724"
 					]
 				}
 			},
@@ -317,6 +317,36 @@
 					"port": "7167",
 					"path": [
 						"Tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDetailTicket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ZTUwMjBlZC1jYjE0LTRlMGItYTE5ZC1hMzU5ZmM0NmE1YWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiY2xpZW50IGNsaWVudCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImNsaWVudEBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiRW1wbG95ZWUiLCJleHAiOjE3NjE0MjI3MTUsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.CR62Ko2NfW-k8qXbVqPOIGgy5Wg2b3BW5fbnBNqoURQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7167/Tickets/4f203fba-6bfe-4eb7-9587-a767c1537724",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"Tickets",
+						"4f203fba-6bfe-4eb7-9587-a767c1537724"
 					]
 				}
 			},
