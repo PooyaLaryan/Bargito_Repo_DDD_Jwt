@@ -5,7 +5,7 @@ using OrderManagement.Domain.Repositories.Users.Query;
 
 namespace Ordermanagement.Infrastructure.Repositories.Users.Query;
 
-public class LoginQueryRepository : ILoginQueryRepository
+public class LoginQueryRepository : IUserQueryRepository
 {
     private readonly ReadDbContext _readDbContext;
 
@@ -14,9 +14,20 @@ public class LoginQueryRepository : ILoginQueryRepository
         _readDbContext = readDbContext;
     }
 
-    public async Task<User?> GetUserByEmailAsync(string email)
+    public async Task<IReadOnlyList<User>> GetAllUsersAsync(CancellationToken cancellationToken)
     {
-        var user = await _readDbContext.Users.FirstOrDefaultAsync(x => x.Email == email);
+        return await _readDbContext.Users.ToListAsync(cancellationToken);
+    }
+
+    public async Task<User?> GetUserByEmailAsync(string email, CancellationToken cancellationToken)
+    {
+        var user = await _readDbContext.Users.FirstOrDefaultAsync(x => x.Email == email, cancellationToken);
+        return user;
+    }
+
+    public async Task<User> GetUserByIdAsync(Guid userId, CancellationToken cancellationToken)
+    {
+        var user = await _readDbContext.Users.FirstAsync(x => x.Id == userId, cancellationToken);
         return user;
     }
 }

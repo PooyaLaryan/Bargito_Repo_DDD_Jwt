@@ -40,6 +40,11 @@ namespace Ordermanagement.Infrastructure.Configurations
                 .IsRequired(false)
                 .HasColumnName(nameof(Ticket.AssignedToUser));
 
+            builder.Property(t => t.CreatedAt)
+                .HasColumnName(nameof(Ticket.CreatedAt));
+
+            builder.Property(t => t.UpdatedAt)
+                .HasColumnName(nameof(Ticket.UpdatedAt));
 
             builder.HasOne(x=>x.CreatedByUser)
                 .WithMany(x=>x.CreatedTickets)

@@ -24,16 +24,13 @@ namespace OrderManagement.Domain.Entities
         public string Description { get; private set; }
         public Status Status { get; private set; }
         public Priority Priority { get; private set; }
-
-        // Is Shadow props and assign to table on onModelCreating
-        // CreatedAt(datetime)
-        // UpdatedAt(datetime)
-
         public Guid CreatedByUserId { get; private set; }
         public User CreatedByUser { get; set; }
-
         public Guid? AssignedToUserId { get; private set; }
         public User? AssignedToUser { get; set; }
+
+        public DateTime CreatedAt { get; private set; }
+        public DateTime UpdatedAt { get; private set; }
 
         public static Ticket Create(string title, string description, Priority priority, Guid createdByUserId)
         {
@@ -46,6 +43,12 @@ namespace OrderManagement.Domain.Entities
 
             return new Ticket(title.Trim(), description.Trim(), Status.Open, priority, createdByUserId);
         }
+
+        public void UpdateStatus(Status status)
+        {
+            Status = status;
+            UpdatedAt = DateTime.UtcNow;
+        }   
 
         public void AssignTo(User admin)
         {

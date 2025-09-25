@@ -13,10 +13,10 @@ public class UserCommandRepository : IUserCommandRepository
     {
         _writeDbContext = writeDbContext;
     }
-    public async Task<Guid> RegisterAsync(User user)
+    public async Task<Guid> RegisterAsync(User user, CancellationToken cancellationToken)
     {
         await _writeDbContext.Users.AddAsync(user);
-        await _writeDbContext.SaveChangesAsync();
+        await _writeDbContext.SaveChangesAsync(cancellationToken);
 
         return user.Id;
     }

@@ -5,22 +5,22 @@ using OrderManagement.Domain.Repositories.Security;
 using OrderManagement.Domain.Repositories.Users.Query;
 
 namespace OrderManagement.Application.Users.Query;
-public record LoginUserCommand(string Email, string Password) : IRequest<LoginUserResult>;
+public record LoginUserQuery(string Email, string Password) : IRequest<LoginUserResult>;
 public record LoginUserResult(string Token, string FullName, UserRole Role);
 
-public class LoginUserHandler : IRequestHandler<LoginUserCommand, LoginUserResult>
+public class LoginUserQueryHandler : IRequestHandler<LoginUserQuery, LoginUserResult>
 {
-    private readonly ILoginQueryRepository _loginQueryRepository;
+    private readonly IUserQueryRepository _userQueryRepository;
     private readonly ITokenGenerator _tokenGenerator;
 
-    public LoginUserHandler(ILoginQueryRepository loginQueryRepository, ITokenGenerator tokenGenerator)
+    public LoginUserQueryHandler(IUserQueryRepository userQueryRepository, ITokenGenerator tokenGenerator)
     {
-        _loginQueryRepository = loginQueryRepository;
+        _userQueryRepository = userQueryRepository;
         _tokenGenerator = tokenGenerator;
     }
-    public async Task<LoginUserResult> Handle(LoginUserCommand request, CancellationToken cancellationToken)
+    public async Task<LoginUserResult> Handle(LoginUserQuery request, CancellationToken cancellationToken)
     {
-        var user = await _loginQueryRepository.GetUserByEmailAsync(request.Email);
+        var user = await _userQueryRepository.GetUserByEmailAsync(request.Email, cancellationToken);
 
         if (user == null || !BCrypt.Net.BCrypt.Verify(request.Password, user.Password))
             throw new UnauthorizedAccessException("Invalid credentials");

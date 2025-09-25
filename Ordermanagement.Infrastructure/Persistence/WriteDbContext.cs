@@ -14,8 +14,9 @@ public class WriteDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<Ticket>().Property<DateTime>("CreatedAt");
-        modelBuilder.Entity<Ticket>().Property<DateTime>("UpdatedAt");
+        // Shadow properties example
+        //modelBuilder.Entity<Ticket>().Property<DateTime>("CreatedAt");
+        //modelBuilder.Entity<Ticket>().Property<DateTime>("UpdatedAt");
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(WriteDbContext).Assembly);
     }

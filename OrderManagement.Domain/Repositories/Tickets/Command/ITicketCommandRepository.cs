@@ -4,5 +4,6 @@ namespace OrderManagement.Domain.Repositories.Tickets.Command;
 
 public interface ITicketCommandRepository
 {
-    Task<Guid> CreateTicketAsync(Ticket ticket);
+    Task<Guid> CreateTicketAsync(Ticket ticket, CancellationToken cancellationToken);
+    Task<Ticket> UpdateTicketAsync(Ticket ticket, CancellationToken cancellationToken);
 }

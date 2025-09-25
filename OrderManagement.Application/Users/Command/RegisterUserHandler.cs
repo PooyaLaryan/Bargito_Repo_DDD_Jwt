@@ -22,7 +22,7 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Register
     {
         string hashed = BCrypt.Net.BCrypt.HashPassword(request.Password);
         var user = new User(request.FullName, request.Email, hashed, request.UserRole);
-        var id = await _userCommandRepository.RegisterAsync(user);
+        var id = await _userCommandRepository.RegisterAsync(user, cancellationToken);
 
         return new RegisterUserResult(id);
     }

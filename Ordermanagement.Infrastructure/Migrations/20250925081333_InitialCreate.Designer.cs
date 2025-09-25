@@ -11,8 +11,8 @@ using Ordermanagement.Infrastructure.Persistence;
 namespace Ordermanagement.Infrastructure.Migrations
 {
     [DbContext(typeof(WriteDbContext))]
-    [Migration("20250924151841_addTikcets")]
-    partial class addTikcets
+    [Migration("20250925081333_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,7 +31,8 @@ namespace Ordermanagement.Infrastructure.Migrations
                         .HasColumnName("AssignedToUser");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasColumnName("CreatedAt");
 
                     b.Property<Guid>("CreatedByUserId")
                         .HasColumnType("TEXT");
@@ -56,7 +57,8 @@ namespace Ordermanagement.Infrastructure.Migrations
                         .HasColumnName("Title");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasColumnName("UpdatedAt");
 
                     b.HasKey("Id");
 

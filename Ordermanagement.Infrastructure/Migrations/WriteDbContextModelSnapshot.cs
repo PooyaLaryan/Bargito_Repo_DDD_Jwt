@@ -28,7 +28,8 @@ namespace Ordermanagement.Infrastructure.Migrations
                         .HasColumnName("AssignedToUser");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasColumnName("CreatedAt");
 
                     b.Property<Guid>("CreatedByUserId")
                         .HasColumnType("TEXT");
@@ -53,7 +54,8 @@ namespace Ordermanagement.Infrastructure.Migrations
                         .HasColumnName("Title");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasColumnName("UpdatedAt");
 
                     b.HasKey("Id");
 

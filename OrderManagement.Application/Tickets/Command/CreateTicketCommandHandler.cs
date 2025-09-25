@@ -31,7 +31,7 @@ namespace OrderManagement.Application.Tickets.Command
             var createdBy = _currentUser.UserId;
 
             var ticket = new Ticket(request.Title, request.Description, request.Status, request.Priority, createdBy);
-            var id = await _ticketRepository.CreateTicketAsync(ticket);
+            var id = await _ticketRepository.CreateTicketAsync(ticket, cancellationToken);
             return new CreateTicketResult(id);
         }
     }

@@ -1,9 +1,11 @@
+using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Ordermanagement.Infrastructure.Persistence;
 using Ordermanagement.Infrastructure.Repositories.Security;
 using Ordermanagement.Infrastructure.Repositories.Tickets.Command;
+using Ordermanagement.Infrastructure.Repositories.Tickets.Query;
 using Ordermanagement.Infrastructure.Repositories.Users.Command;
 using Ordermanagement.Infrastructure.Repositories.Users.Query;
 using Ordermanagement.Infrastructure.Services;
@@ -12,10 +14,10 @@ using OrderManagement.Application.Users.Command;
 using OrderManagement.Application.Users.Query;
 using OrderManagement.Domain.Repositories.Security;
 using OrderManagement.Domain.Repositories.Tickets.Command;
+using OrderManagement.Domain.Repositories.Tickets.Query;
 using OrderManagement.Domain.Repositories.Users;
 using OrderManagement.Domain.Repositories.Users.Command;
 using OrderManagement.Domain.Repositories.Users.Query;
-using System.Text;
 
 internal class Program
 {
@@ -45,7 +47,7 @@ internal class Program
                 ValidateIssuerSigningKey = true,
                 ValidIssuer = jwtSettings["Issuer"],
                 ValidAudience = jwtSettings["Audience"],
-                IssuerSigningKey = new SymmetricSecurityKey(key)
+                IssuerSigningKey = new SymmetricSecurityKey(key),
             };
         });
 
@@ -59,7 +61,7 @@ internal class Program
         builder.Services.AddMediatR(cfg =>
             cfg.RegisterServicesFromAssembly(typeof(RegisterUserHandler).Assembly));
         builder.Services.AddMediatR(cfg =>
-            cfg.RegisterServicesFromAssembly(typeof(LoginUserHandler).Assembly));
+            cfg.RegisterServicesFromAssembly(typeof(LoginUserQueryHandler).Assembly));
 
         //Accessor
         builder.Services.AddHttpContextAccessor();
@@ -68,8 +70,9 @@ internal class Program
         builder.Services.AddScoped<DbSeeder>();
         builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
         builder.Services.AddScoped<IUserCommandRepository, UserCommandRepository>();
-        builder.Services.AddScoped<ILoginQueryRepository, LoginQueryRepository>();
+        builder.Services.AddScoped<IUserQueryRepository, LoginQueryRepository>();
         builder.Services.AddScoped<ITicketCommandRepository, TicketCommandRepository>();
+        builder.Services.AddScoped<ITicketQueryRepository, TicketQueryRepository>();
         builder.Services.AddScoped<ITokenGenerator, JwtTokenGenerator>();
 
         var app = builder.Build();

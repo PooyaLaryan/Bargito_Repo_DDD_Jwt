@@ -17,7 +17,7 @@ namespace OrderManagement.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login([FromBody] LoginUserCommand loginUserCommand)
+        public async Task<IActionResult> Login([FromBody] LoginUserQuery loginUserCommand)
         {
             try
             {

@@ -12,11 +12,18 @@ public class TicketCommandRepository : ITicketCommandRepository
     {
         _writeDbContext = writeDbContext;
     }
-    public async Task<Guid> CreateTicketAsync(Ticket ticket)
+    public async Task<Guid> CreateTicketAsync(Ticket ticket, CancellationToken cancellationToken)
     {
         await _writeDbContext.Ticket.AddAsync(ticket);
-        await _writeDbContext.SaveChangesAsync();
+        await _writeDbContext.SaveChangesAsync(cancellationToken);
 
         return ticket.Id;
+    }
+
+    public async Task<Ticket> UpdateTicketAsync(Ticket ticket, CancellationToken cancellationToken)
+    {
+        _writeDbContext.Update(ticket);
+        await _writeDbContext.SaveChangesAsync(cancellationToken);
+        return ticket;
     }
 }

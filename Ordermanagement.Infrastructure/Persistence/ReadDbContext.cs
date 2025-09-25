@@ -8,6 +8,7 @@ public class ReadDbContext : DbContext
     public ReadDbContext(DbContextOptions<ReadDbContext> dbContextOptions) : base(dbContextOptions) { }
 
     public DbSet<User> Users { get; set; }
+    public DbSet<Ticket> Tickets { get; set; } 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
