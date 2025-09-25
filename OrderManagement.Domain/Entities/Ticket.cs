@@ -54,12 +54,14 @@ namespace OrderManagement.Domain.Entities
         {
             AssignedToUser = admin ?? throw new ArgumentNullException(nameof(admin));
             AssignedToUserId = admin.Id;
+            UpdatedAt = DateTime.UtcNow;
         }
 
         public void Unassign()
         {
             AssignedToUser = null;
             AssignedToUserId = null;
+            UpdatedAt = DateTime.UtcNow;
         }
 
     }
