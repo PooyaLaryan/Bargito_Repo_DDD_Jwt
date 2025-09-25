@@ -20,6 +20,13 @@ public class TicketCommandRepository : ITicketCommandRepository
         return ticket.Id;
     }
 
+    public Task DeleteTicketAsync(Ticket ticket, CancellationToken cancellationToken)
+    {
+        _writeDbContext.Ticket.Remove(ticket);
+        return _writeDbContext.SaveChangesAsync(cancellationToken);
+
+    }
+
     public async Task<Ticket> UpdateTicketAsync(Ticket ticket, CancellationToken cancellationToken)
     {
         _writeDbContext.Update(ticket);

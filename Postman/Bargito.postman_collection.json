@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "bb48dce7-f272-407e-8b48-1477a15fdb35",
+		"name": "Bargito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8454316"
+	},
+	"item": [
+		{
+			"name": "AdminToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin@bargito.ir\",\r\n  \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7167/auth",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EmployeeToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"client@bargito.ir\",\r\n  \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7167/auth",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TicketMy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ZTUwMjBlZC1jYjE0LTRlMGItYTE5ZC1hMzU5ZmM0NmE1YWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiY2xpZW50IGNsaWVudCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImNsaWVudEBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiRW1wbG95ZWUiLCJleHAiOjE3NTg3OTc2MDcsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.TtEnNVczzz_Rz6FlII5tAyDOz2zJgTyRmRU00P-7Juc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7167/Tickets/my",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"Tickets",
+						"my"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTicket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ZTUwMjBlZC1jYjE0LTRlMGItYTE5ZC1hMzU5ZmM0NmE1YWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiY2xpZW50IGNsaWVudCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImNsaWVudEBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiRW1wbG95ZWUiLCJleHAiOjE3NTg3OTc2MDcsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.TtEnNVczzz_Rz6FlII5tAyDOz2zJgTyRmRU00P-7Juc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"New Ticket From Client\",\r\n  \"description\": \"Please Do that!\",\r\n  \"status\": 0,\r\n  \"priority\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7167/Tickets",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"Tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllTicketAdminOnly",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZDc0MWZmMS1lYzQ5LTQzM2UtYWY5OC1kMzUyN2RhNTZmZjAiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4gYWRtaW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3NTg3OTc1NjUsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.oAhBL04-7rTCL9ZB7IodfCH1o2kLyYzuH00uZsfxe58",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7167/Tickets",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"Tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTicket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZDc0MWZmMS1lYzQ5LTQzM2UtYWY5OC1kMzUyN2RhNTZmZjAiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4gYWRtaW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3NTg3OTc1NjUsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.oAhBL04-7rTCL9ZB7IodfCH1o2kLyYzuH00uZsfxe58",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_JWT_TOKEN"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"status\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7167/tickets/770f0ffc-a123-4c9b-bf71-9b9a40fd650c",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"tickets",
+						"770f0ffc-a123-4c9b-bf71-9b9a40fd650c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZDc0MWZmMS1lYzQ5LTQzM2UtYWY5OC1kMzUyN2RhNTZmZjAiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4gYWRtaW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3NTg3OTc1NjUsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.oAhBL04-7rTCL9ZB7IodfCH1o2kLyYzuH00uZsfxe58",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7167/User",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTicketCount",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZDc0MWZmMS1lYzQ5LTQzM2UtYWY5OC1kMzUyN2RhNTZmZjAiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4gYWRtaW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3NTg3OTc1NjUsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.oAhBL04-7rTCL9ZB7IodfCH1o2kLyYzuH00uZsfxe58",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7167/Tickets/stats?status=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"Tickets",
+						"stats"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTicket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZDc0MWZmMS1lYzQ5LTQzM2UtYWY5OC1kMzUyN2RhNTZmZjAiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4gYWRtaW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBiYXJnaXRvLmlyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3NTg3OTc1NjUsImlzcyI6InlvdXItYXBwIiwiYXVkIjoieW91ci1hcHAtdXNlcnMifQ.oAhBL04-7rTCL9ZB7IodfCH1o2kLyYzuH00uZsfxe58",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ticketId\": \"770f0ffc-a123-4c9b-bf71-9b9a40fd650c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7167/Tickets",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"Tickets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

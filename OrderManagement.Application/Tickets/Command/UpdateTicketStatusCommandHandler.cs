@@ -40,9 +40,6 @@ namespace OrderManagement.Application.Tickets.Command
             if (_currentUser.Role != UserRole.Admin)
                 throw new UnauthorizedAccessException("Only admin may update tickets status.");
 
-            if (_currentUser.Role != UserRole.Admin)
-                throw new UnauthorizedAccessException("Only admin can update ticket status.");
-
             var currentUserId = _currentUser.UserId;
             var Adminuser = await _userQueryRepository.GetUserByIdAsync(currentUserId, cancellationToken);
             

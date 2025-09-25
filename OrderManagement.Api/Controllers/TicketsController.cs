@@ -59,5 +59,13 @@ namespace OrderManagement.Api.Controllers
             var result = await _mediator.Send(new GetTicketCountQuery(status));
             return Ok(result);
         }
+
+        [HttpDelete]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeleteTicket([FromBody]DeleteTicketCommand deleteTicketCommand)
+        {
+            await _mediator.Send(deleteTicketCommand);
+            return Ok();
+        }
     }
 }
