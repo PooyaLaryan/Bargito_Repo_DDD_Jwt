@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using OrderManagement.Domain.Dtos;
 using OrderManagement.Domain.Enums;
 using OrderManagement.Domain.Repositories.Security;
 using OrderManagement.Domain.Repositories.Users.Query;

@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OrderManagement.Domain.Enums;
+﻿using OrderManagement.Domain.Enums;
 
-namespace OrderManagement.Domain.Dtos
-{
-    public record UpdateTicketRequest(Status Status);
-}
+namespace OrderManagement.Domain.Dtos;
+
+public record UpdateTicketRequest(Status Status);

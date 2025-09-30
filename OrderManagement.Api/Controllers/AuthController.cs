@@ -1,33 +1,31 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using OrderManagement.Application.Users.Query;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
-namespace OrderManagement.Api.Controllers
+namespace OrderManagement.Api.Controllers;
+
+[ApiController]
+[Route("auth")]
+public class AuthController : ControllerBase
 {
-    [ApiController]
-    [Route("auth")]
-    public class AuthController : ControllerBase
+    private readonly IMediator _mediator;
+
+    public AuthController(IMediator mediator)
     {
-        private readonly IMediator _mediator;
+        _mediator = mediator;
+    }
 
-        public AuthController(IMediator mediator)
+    [HttpPost]
+    public async Task<IActionResult> Login([FromBody] LoginUserQuery loginUserCommand)
+    {
+        try
         {
-            _mediator = mediator;
+            var result = await _mediator.Send(loginUserCommand);
+            return Ok(result);
         }
-
-        [HttpPost]
-        public async Task<IActionResult> Login([FromBody] LoginUserQuery loginUserCommand)
+        catch (UnauthorizedAccessException)
         {
-            try
-            {
-                var result = await _mediator.Send(loginUserCommand);
-                return Ok(result);
-            }
-            catch (UnauthorizedAccessException)
-            {
-                return Unauthorized("Invalid credentials");
-            }
+            return Unauthorized("Invalid credentials");
         }
     }
 }

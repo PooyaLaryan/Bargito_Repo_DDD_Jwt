@@ -1,5 +1,4 @@
-﻿using OrderManagement.Domain.Dtos;
-using OrderManagement.Domain.Entities;
+﻿using OrderManagement.Domain.Entities;
 
 namespace OrderManagement.Domain.Repositories.Users.Query;
 

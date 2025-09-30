@@ -1,6 +1,4 @@
-﻿using MediatR;
-
-namespace OrderManagement.Domain.Entities;
+﻿namespace OrderManagement.Domain.Entities;
 
 public abstract class Entity
 {
